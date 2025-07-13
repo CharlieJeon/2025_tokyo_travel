@@ -3,491 +3,705 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗺️ 지훈이네 가족 맞춤형 4박 5일 도쿄 여행 완벽 가이드</title>
+    <title>🎬 지훈이네 가족 맞춤형 4박 5일 도쿄 여행 가이드 (이와이 슌지 영화 성지 추가)</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-        
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            line-height: 1.6;
+        body { 
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
         }
-        
-        .gradient-bg {
+        .hero-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        
-        .map-link {
-            background: linear-gradient(45deg, #4285f4, #34a853);
-            transition: all 0.3s ease;
-        }
-        
-        .map-link:hover {
+        .card-hover:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
-        }
-        
-        .day-card {
-            border-left: 4px solid #667eea;
             transition: all 0.3s ease;
         }
-        
-        .day-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .location-card {
+            border-left: 4px solid #3b82f6;
         }
-        
-        .restaurant-card {
-            border: 2px solid #e5e7eb;
+        .movie-card {
+            border-left: 4px solid #ef4444;
+        }
+        .food-card {
+            border-left: 4px solid #10b981;
+        }
+        .day-section {
+            border-left: 4px solid #f59e0b;
+        }
+        .google-maps-btn {
+            background: linear-gradient(45deg, #4285f4, #34a853);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
-        
-        .restaurant-card:hover {
-            border-color: #667eea;
-            transform: translateY(-3px);
+        .google-maps-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
         }
-        
-        .family-member-card {
+        .iwai-section {
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-        }
-        
-        .spot-item {
-            background: #f8fafc;
-            border-left: 3px solid #10b981;
-        }
-        
-         {
-            body {
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .no-print {
-                display: none;
-            }
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="gradient-bg text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl font-bold mb-4">🗺️ 지훈이네 가족 맞춤형 도쿄 여행 가이드</h1>
-            <p class="text-xl opacity-90">4박 5일 완벽 일정 | 영화 성지순례 + 발레 체험 + 개별 여행</p>
-            <div class="mt-4 text-sm">
-                <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full mr-2">📍 모든 장소 구글지도 링크 포함</span>
-                <span class="inline-block bg-white bg-opacity-20 px-3 py-1 rounded-full">🎬 지훈이 맞춤 영화 명소</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Travel Overview -->
-    <section class="py-8 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="family-member-card p-6 rounded-lg text-center">
-                    <i class="fas fa-film text-4xl text-purple-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">🎬 지훈이</h3>
-                    <p class="text-gray-700">영화 성지순례<br>애니메이션 명소 탐방</p>
-                </div>
-                <div class="family-member-card p-6 rounded-lg text-center">
-                    <i class="fas fa-dancing text-4xl text-pink-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">🩰 어머니</h3>
-                    <p class="text-gray-700">발레 스튜디오 체험<br>문화 활동</p>
-                </div>
-                <div class="family-member-card p-6 rounded-lg text-center">
-                    <i class="fas fa-running text-4xl text-green-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">🏃‍♂️ 아버지</h3>
-                    <p class="text-gray-700">러닝 코스 체험<br>혼자만의 시간</p>
-                </div>
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">🎬 지훈이네 가족 맞춤형 도쿄 여행</h1>
+            <p class="text-xl mb-6">영화 성지순례 + 발레 체험 + 미식 투어 완벽 가이드</p>
+            <div class="flex justify-center items-center space-x-8 text-lg">
+                <div><i class="fas fa-calendar-alt mr-2"></i>4박 5일</div>
+                <div><i class="fas fa-map-marker-alt mr-2"></i>하코네 + 도쿄</div>
+                <div><i class="fas fa-users mr-2"></i>가족 맞춤</div>
             </div>
         </div>
     </section>
 
-    <!-- Day by Day Itinerary -->
-    <section class="py-8">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">📅 일정별 여행 계획</h2>
-            
-            <!-- Day 1 -->
-            <div class="day-card bg-white p-6 rounded-lg shadow-lg mb-6">
-                <div class="flex items-center mb-4">
-                    <div class="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">1</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Day 1 - 하코네 온천 휴양</h3>
-                        <p class="text-gray-600">10월 5일 | 김포공항 출발 → 하네다공항 → 하코네</p>
+    <div class="container mx-auto px-6 py-8">
+
+        <!-- 여행 개요 -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-info-circle text-blue-500 mr-3"></i>여행 개요
+                </h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-6 bg-blue-50 rounded-lg">
+                        <i class="fas fa-plane text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">출발/도착</h3>
+                        <p class="text-gray-600">10월 5일 08:40 김포<br>10월 9일 12:05 하네다</p>
+                    </div>
+                    <div class="text-center p-6 bg-green-50 rounded-lg">
+                        <i class="fas fa-hot-tub text-4xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">하코네 온천</h3>
+                        <p class="text-gray-600">첫날 1박 료칸<br>가이세키 요리 포함</p>
+                    </div>
+                    <div class="text-center p-6 bg-purple-50 rounded-lg">
+                        <i class="fas fa-city text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">도쿄 시내</h3>
+                        <p class="text-gray-600">3박 4일<br>영화 성지순례 중심</p>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">🛬 하네다공항 도착 (11:10)</h4>
-                        <p class="text-gray-700 mb-2">입국수속 → 교통패스 구입 → 하코네 이동</p>
-                        <a href="https://maps.google.com/maps?q=Haneda Airport Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+            </div>
+        </section>
+
+        <!-- 이와이 슌지 감독 영화 성지 특별 섹션 -->
+        <section class="iwai-section rounded-lg p-8 mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <i class="fas fa-film text-red-500 mr-3"></i>지훈이 특별 코스: 이와이 슌지 감독 영화 성지순례
+            </h2>
+            <p class="text-lg text-gray-700 mb-8">릴리슈슈의 모든 것, 4월이야기, 하나와 앨리스 등 감성적인 일본 영화의 촬영지를 방문해보세요!</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 릴리슈슈의 모든 것 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 movie-card">
+                    <img src="https://img.japankuru.com/prg_img/img/img2020030917271109668200.png" alt="릴리슈슈의 모든 것" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">릴리슈슈의 모든 것 (2001)</h3>
+                    <p class="text-gray-600 mb-4">도치기현 아시카가 지역에서 촬영된 청춘 드라마의 명작</p>
+                    <div class="space-y-3">
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 아시카가역</h4>
+                            <p class="text-sm text-gray-600">〒326-0054 Tochigi, Ashikaga, Iseminamichō</p>
+                            <a href="https://www.google.com/maps/search/Ashikaga+Station+Tochigi" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 아가타역</h4>
+                            <p class="text-sm text-gray-600">〒326-0328 Tochigi, Ashikaga, Agatachō</p>
+                            <a href="https://www.google.com/maps/search/Agata+Station+Tochigi" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
                     </div>
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">♨️ 하코네 카쇼 료칸</h4>
-                        <p class="text-gray-700 mb-2">전통 온천 료칸 | 가이세키 요리 | 노천온천</p>
-                        <a href="https://www.hakone.co.jp/" target="_blank" class="text-blue-600 underline text-sm block mb-2">🌐 공식 홈페이지</a>
-                        <a href="https://maps.google.com/maps?q=Hakone Kanagawa Japan" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+                    <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                        <p class="text-sm"><strong>💡 방문 팁:</strong> 도쿄에서 당일치기 가능 (약 1시간 30분), 아시카가 플라워파크와 함께 방문 추천</p>
+                    </div>
+                </div>
+
+                <!-- 4월이야기 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 movie-card">
+                    <img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000002/img/basic/a0000002_main.jpg" alt="4월이야기" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">4월이야기 (1998)</h3>
+                    <p class="text-gray-600 mb-4">도쿄 대학가의 아름다운 벚꽃과 청춘 이야기</p>
+                    <div class="space-y-3">
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 무사시노대학 주변</h4>
+                            <p class="text-sm text-gray-600">도쿄 서부 무사시노 지역</p>
+                            <a href="https://www.google.com/maps/search/Musashino+University+Tokyo" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 도쿄 대학가 벚꽃길</h4>
+                            <p class="text-sm text-gray-600">영화 속 벚꽃 캠퍼스 풍경</p>
+                            <a href="https://www.google.com/maps/search/Tokyo+University+Cherry+Blossom" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                        <p class="text-sm"><strong>💡 방문 팁:</strong> 4월 벚꽃 시즌이 가장 아름답지만, 10월 단풍도 매력적</p>
+                    </div>
+                </div>
+
+                <!-- 하나와 앨리스 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 movie-card">
+                    <img src="https://cdn.japan-travel-note.com/images/00548/40.jpg" alt="하나와 앨리스" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">하나와 앨리스 (2004)</h3>
+                    <p class="text-gray-600 mb-4">가와사키시에서 촬영된 우정과 사랑 이야기</p>
+                    <div class="space-y-3">
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 가와사키시 촬영지</h4>
+                            <p class="text-sm text-gray-600">도쿄 서북부 가와사키 지역</p>
+                            <a href="https://www.google.com/maps/search/Kawasaki+City+Tokyo" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold">📍 학교 주변 거리</h4>
+                            <p class="text-sm text-gray-600">영화 속 고등학교 배경</p>
+                            <a href="https://www.google.com/maps/search/Kawasaki+School+District" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>구글 지도
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+                        <p class="text-sm"><strong>💡 방문 팁:</strong> 도쿄에서 가까운 거리, 다른 관광과 함께 방문하기 좋음</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 일정표 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center">
+                <i class="fas fa-calendar-alt text-blue-500 mr-3"></i>상세 일정표
+            </h2>
+
+            <!-- Day 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 day-section">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">📅 Day 1 (10월 5일) - 하네다공항 → 하코네</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-plane text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">11:10 하네다공항 도착</h4>
+                            <p class="text-gray-600">입국 수속 및 짐 찾기 (약 1시간), 하코네 프리패스 구입</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-train text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">13:00 하코네 이동</h4>
+                            <p class="text-gray-600">하네다공항 → 하코네유모토역 (약 2시간 30분)</p>
+                            <a href="https://www.google.com/maps/dir/Haneda+Airport/Hakone+Yumoto+Station" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-route"></i>경로 보기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-purple-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-hot-tub text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">15:30 하코네 관광 & 료칸 체크인</h4>
+                            <p class="text-gray-600">아시노코 호수, 하코네 로프웨이, 하코네 신사</p>
+                            <a href="https://www.hakone.co.jp/" target="_blank" class="inline-block mt-2 text-blue-600 hover:underline">
+                                🏨 하코네 카쇼 료칸 공식사이트
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Day 2 -->
-            <div class="day-card bg-white p-6 rounded-lg shadow-lg mb-6">
-                <div class="flex items-center mb-4">
-                    <div class="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">2</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Day 2 - 하코네 → 도쿄 야경 투어</h3>
-                        <p class="text-gray-600">10월 6일 | 하코네 체크아웃 → 도쿄 이동 → 야경 명소</p>
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 day-section">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">📅 Day 2 (10월 6일) - 하코네 → 도쿄 (야경 투어)</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-train text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">10:00 하코네 → 신주쿠 이동</h4>
+                            <p class="text-gray-600">료칸 조식 후 체크아웃, 도쿄 호텔 체크인</p>
+                        </div>
                     </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">🗼 도쿄 타워 야경</h4>
-                        <p class="text-gray-700 mb-2">클래식 야경 명소 | 영화 촬영지 | 150m 메인덱</p>
-                        <div class="text-sm text-gray-600 mb-2">📍 4-2-8 Shibakoen, Minato City, Tokyo</div>
-                        <a href="https://maps.google.com/maps?q=4-2-8+Shibakoen,+Minato+City,+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-red-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-film text-red-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">오후: 신카이 마코토 "너의 이름은" 성지순례</h4>
+                            <div class="mt-2 space-y-2">
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <h5 class="font-semibold">📍 스가신사 계단</h5>
+                                    <p class="text-sm text-gray-600">5-6 Sugacho, Shinjuku City, Tokyo 160-0018</p>
+                                    <a href="https://www.google.com/maps/search/Suga+Shrine+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">🌉 레인보우 브릿지</h4>
-                        <p class="text-gray-700 mb-2">미래 도시 영화 배경 | 오다이바 야경 | 도보 통행 가능</p>
-                        <div class="text-sm text-gray-600 mb-2">📍 Rainbow Bridge, Tokyo</div>
-                        <a href="https://maps.google.com/maps?q=Rainbow+Bridge+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-yellow-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-city text-yellow-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">저녁: 도쿄 야경 명소 투어</h4>
+                            <div class="mt-2 space-y-2">
+                                <div class="border-l-4 border-yellow-500 pl-4">
+                                    <h5 class="font-semibold">📍 도쿄 타워</h5>
+                                    <p class="text-sm text-gray-600">4-2-8 Shibakoen, Minato City, Tokyo 105-0011</p>
+                                    <a href="https://www.google.com/maps/search/Tokyo+Tower" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                                <div class="border-l-4 border-yellow-500 pl-4">
+                                    <h5 class="font-semibold">📍 시부야 스카이</h5>
+                                    <p class="text-sm text-gray-600">최신 야경 명소</p>
+                                    <a href="https://www.google.com/maps/search/Shibuya+Sky+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Day 3 -->
-            <div class="day-card bg-white p-6 rounded-lg shadow-lg mb-6">
-                <div class="flex items-center mb-4">
-                    <div class="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">3</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Day 3 - 영화 성지순례 & 문화 체험</h3>
-                        <p class="text-gray-600">10월 7일 | 너의 이름은 촬영지 → 쇼핑 → 맛집</p>
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 day-section">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">📅 Day 3 (10월 7일) - 이와이 슌지 영화 성지순례</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-red-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-film text-red-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">오전: 4월이야기 촬영지</h4>
+                            <div class="mt-2 space-y-2">
+                                <div class="border-l-4 border-red-500 pl-4">
+                                    <h5 class="font-semibold">📍 무사시노대학 주변</h5>
+                                    <p class="text-sm text-gray-600">벚꽃 캠퍼스와 대학가 분위기</p>
+                                    <a href="https://www.google.com/maps/search/Musashino+University+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">🎬 스가신사 계단 (지훈이 메인)</h4>
-                        <p class="text-gray-700 mb-2">"너의 이름은" 마지막 장면 | 타키와 미츠하 재회 장소</p>
-                        <div class="text-sm text-gray-600 mb-2">📍 5-6 Sugacho, Shinjuku City, Tokyo</div>
-                        <a href="https://maps.google.com/maps?q=5-6+Sugacho,+Shinjuku+City,+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-tree text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">오후: 피크닉 성지 공원 투어</h4>
+                            <div class="mt-2 space-y-2">
+                                <div class="border-l-4 border-green-500 pl-4">
+                                    <h5 class="font-semibold">📍 이노카시라 공원</h5>
+                                    <p class="text-sm text-gray-600">기치조지, 많은 영화와 드라마 촬영지</p>
+                                    <a href="https://www.google.com/maps/search/Inokashira+Park+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                                <div class="border-l-4 border-green-500 pl-4">
+                                    <h5 class="font-semibold">📍 요요기 공원</h5>
+                                    <p class="text-sm text-gray-600">피크닉의 성지, 신카이 마코토 작품 배경</p>
+                                    <a href="https://www.google.com/maps/search/Yoyogi+Park+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">🎭 시부야 스크램블 교차로</h4>
-                        <p class="text-gray-700 mb-2">"로스트 인 트랜슬레이션" 촬영지 | 하치코 동상</p>
-                        <div class="text-sm text-gray-600 mb-2">📍 Shibuya Crossing, Tokyo</div>
-                        <a href="https://maps.google.com/maps?q=Shibuya+Crossing+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                        </a>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-train text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">선택사항: 도치기현 아시카가 당일치기</h4>
+                            <p class="text-gray-600">릴리슈슈의 모든 것 촬영지 (시간 여유시)</p>
+                            <a href="https://www.google.com/maps/dir/Tokyo/Ashikaga+Station+Tochigi" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-route"></i>도쿄에서 아시카가 경로
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 4 - Special Individual Day -->
-            <div class="day-card bg-white p-6 rounded-lg shadow-lg mb-6">
-                <div class="flex items-center mb-4">
-                    <div class="bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">4</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Day 4 - 가족 개별 여행의 날</h3>
-                        <p class="text-gray-600">10월 8일 | 각자의 취향에 맞는 특별한 하루</p>
-                    </div>
-                </div>
+            <!-- Day 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 day-section">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">📅 Day 4 (10월 8일) - 가족 각자 여행의 날</h3>
                 
-                <!-- 지훈이 일정 -->
-                <div class="bg-purple-50 p-4 rounded-lg mb-4">
-                    <h4 class="text-xl font-bold text-purple-800 mb-3">🎬 지훈이의 영화 성지순례</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">아키하바라 전자상가</h5>
-                            <p class="text-sm text-gray-600 mb-2">오타쿠 문화 영화 배경지</p>
-                            <a href="https://maps.google.com/maps?q=Akihabara+Tokyo" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
-                        </div>
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">신주쿠 육교</h5>
-                            <p class="text-sm text-gray-600 mb-2">도시 영화 단골 장소</p>
-                            <a href="https://maps.google.com/maps?q=Shinjuku+Station+Tokyo" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 어머니 일정 -->
-                <div class="bg-pink-50 p-4 rounded-lg mb-4">
-                    <h4 class="text-xl font-bold text-pink-800 mb-3">🩰 어머니의 발레 체험</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">차코트 다이칸야마 본점</h5>
-                            <p class="text-sm text-gray-600 mb-2">일본 최고 발레 브랜드 | 쇼핑 + 스튜디오</p>
-                            <div class="text-xs text-gray-500 mb-2">📍 14-18 Daikanyamacho, Shibuya City</div>
-                            <a href="https://maps.google.com/maps?q=14-18+Daikanyamacho,+Shibuya+City,+Tokyo" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
-                        </div>
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">Angel R 오모테산도</h5>
-                            <p class="text-sm text-gray-600 mb-2">발레 체험 클래스 | 비지터 수업 가능</p>
-                            <div class="text-xs text-gray-500 mb-2">📍 5-4-40 Minamiaoyama, Minato City</div>
-                            <a href="https://maps.google.com/maps?q=5-4-40+Minamiaoyama,+Minato+City,+Tokyo" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- 지훈이 코스 -->
+                    <div class="bg-red-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-red-600 mb-4">🎬 지훈이의 영화 성지순례</h4>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-red-500 pl-3">
+                                <h5 class="font-semibold">아키하바라</h5>
+                                <p class="text-sm text-gray-600">오타쿠 문화 영화 배경</p>
+                                <a href="https://www.google.com/maps/search/Akihabara+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
+                            <div class="border-l-4 border-red-500 pl-3">
+                                <h5 class="font-semibold">하나와 앨리스 촬영지</h5>
+                                <p class="text-sm text-gray-600">가와사키시 지역</p>
+                                <a href="https://www.google.com/maps/search/Kawasaki+City+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- 아버지 일정 -->
-                <div class="bg-green-50 p-4 rounded-lg">
-                    <h4 class="text-xl font-bold text-green-800 mb-3">🏃‍♂️ 아버지의 혼자 여행</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">고쿄(황궁) 러닝 코스</h5>
-                            <p class="text-sm text-gray-600 mb-2">도쿄 최고 러닝 코스 | 5km | 시계 반대방향</p>
-                            <div class="text-xs text-gray-500 mb-2">📍 1-1 Chiyoda, Chiyoda City</div>
-                            <a href="https://maps.google.com/maps?q=1-1+Chiyoda,+Chiyoda+City,+Tokyo" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
+                    <!-- 어머니 코스 -->
+                    <div class="bg-pink-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-pink-600 mb-4">🩰 어머니의 발레 체험</h4>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-pink-500 pl-3">
+                                <h5 class="font-semibold">차코트 다이칸야마</h5>
+                                <p class="text-sm text-gray-600">14-18 Daikanyamacho, Shibuya</p>
+                                <a href="https://www.google.com/maps/search/Chacott+Daikanyama+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
+                            <div class="border-l-4 border-pink-500 pl-3">
+                                <h5 class="font-semibold">Angel R 오모테산도</h5>
+                                <p class="text-sm text-gray-600">5-4-40 Minamiaoyama, Minato</p>
+                                <a href="https://www.google.com/maps/search/Angel+R+Omotesando+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
                         </div>
-                        <div class="bg-white p-3 rounded">
-                            <h5 class="font-bold">후글렌 도쿄 카페</h5>
-                            <p class="text-sm text-gray-600 mb-2">스칸디나비아 스타일 | 혼자 가기 좋은 카페</p>
-                            <a href="https://maps.google.com/maps?q=Fuglen+Tokyo+Shibuya" target="_blank" class="map-link text-white px-3 py-1 rounded text-xs inline-block">
-                                <i class="fas fa-map-marker-alt mr-1"></i>지도보기
-                            </a>
+                    </div>
+
+                    <!-- 아버지 코스 -->
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="text-xl font-bold text-blue-600 mb-4">🏃‍♂️ 아버지의 혼자 여행</h4>
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-blue-500 pl-3">
+                                <h5 class="font-semibold">고쿄 러닝 코스</h5>
+                                <p class="text-sm text-gray-600">1-1 Chiyoda, 황궁 5km 코스</p>
+                                <a href="https://www.google.com/maps/search/Imperial+Palace+Running+Course+Tokyo" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
+                            <div class="border-l-4 border-blue-500 pl-3">
+                                <h5 class="font-semibold">후글렌 도쿄 카페</h5>
+                                <p class="text-sm text-gray-600">스칸디나비아 스타일</p>
+                                <a href="https://www.google.com/maps/search/Fuglen+Tokyo+Shibuya" target="_blank" class="google-maps-btn mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>지도
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Day 5 -->
-            <div class="day-card bg-white p-6 rounded-lg shadow-lg mb-6">
-                <div class="flex items-center mb-4">
-                    <div class="bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold mr-4">5</div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800">Day 5 - 마지막 쇼핑 & 출발</h3>
-                        <p class="text-gray-600">10월 9일 | 아사쿠사 → 쇼핑 → 하네다공항 출발</p>
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 day-section">
+                <h3 class="text-2xl font-bold text-orange-600 mb-4">📅 Day 5 (10월 9일) - 마지막 관광 & 출발</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-green-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-torii-gate text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">오전: 메이지신궁 & 시부야</h4>
+                            <p class="text-gray-600">평화로운 아침 산책 후 마지막 쇼핑</p>
+                            <a href="https://www.google.com/maps/search/Meiji+Shrine+Tokyo" target="_blank" class="google-maps-btn mt-2">
+                                <i class="fas fa-map-marker-alt"></i>메이지신궁 위치
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 rounded-full p-2 flex-shrink-0">
+                            <i class="fas fa-plane text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">10:00 하네다공항 이동</h4>
+                            <p class="text-gray-600">12:05 출발 비행기 탑승</p>
+                        </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">⛩️ 센소지 절</h4>
-                        <p class="text-gray-700 mb-2">전통 일본 영화 배경 | 나카미세도리 쇼핑</p>
-                        <a href="https://maps.google.com/maps?q=Sensoji+Temple+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
+            </div>
+        </section>
+
+        <!-- 맛집 가이드 -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center">
+                <i class="fas fa-utensils text-green-500 mr-3"></i>완벽한 맛집 가이드
+            </h2>
+
+            <!-- 라멘 맛집 -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://umamibites.com/wp-content/uploads/2024/02/UB109_main.jpg" alt="후운지 라멘" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">🍜 후운지 (Fuunji)</h3>
+                    <p class="text-gray-600 mb-3">타베로그 도쿄 라멘 랭킹 1위 쯔케멘 전문점</p>
+                    <div class="border-l-4 border-green-500 pl-4 mb-3">
+                        <p class="text-sm"><strong>주소:</strong> 2-14-3 Yoyogi, Shibuya City, Tokyo 151-0053</p>
+                        <p class="text-sm"><strong>영업시간:</strong> 11:00-21:00</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Fuunji+Ramen+Yoyogi+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/03ba7f9c-9081-4f28-b8b6-19be95f9eeba.jpeg" alt="로쿠린샤" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">🍜 로쿠린샤 (Rokurinsha)</h3>
+                    <p class="text-gray-600 mb-3">도쿄역 라멘 스트리트 대표 맛집</p>
+                    <div class="border-l-4 border-green-500 pl-4 mb-3">
+                        <p class="text-sm"><strong>주소:</strong> 도쿄역 일번가 지하 1층 라멘 스트리트</p>
+                        <p class="text-sm"><strong>영업시간:</strong> 07:30-21:00</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Rokurinsha+Tokyo+Station+Ramen+Street" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                    </a>
+                </div>
+            </div>
+
+            <!-- 야키토리 & 스시 -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://japankuru.com/gld-kanri/data/uploads/2024/08/DSC_1804.jpg" alt="토리키조쿠" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">🍗 토리키조쿠 (Torikizoku)</h3>
+                    <p class="text-gray-600 mb-3">모든 메뉴 370엔 균일가 야키토리 체인</p>
+                    <div class="border-l-4 border-green-500 pl-4 mb-3">
+                        <p class="text-sm"><strong>시부야점:</strong> 34-5 Udagawacho, Shibuya, Tokyo</p>
+                        <p class="text-sm"><strong>영업시간:</strong> 17:00-01:00</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Torikizoku+Shibuya+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://rimage.savorjapan.com/svj/image/discover_oishii_japan/2170/article_312230_w640z.jpg" alt="츠키지 스시" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-3">🍣 츠키지 스시 맛집</h3>
+                    <p class="text-gray-600 mb-3">신선한 해산물로 유명한 츠키지 지역</p>
+                    <div class="border-l-4 border-green-500 pl-4 mb-3">
+                        <p class="text-sm"><strong>위치:</strong> 츠키지 외곽 시장 일대</p>
+                        <p class="text-sm"><strong>추천:</strong> 스시 다이, 스시잔마이</p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/Tsukiji+Sushi+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>구글 지도
+                    </a>
+                </div>
+            </div>
+
+            <!-- 전통 일본 요리 -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://i.namu.wiki/i/y8_vdPPxKXolmei_sm_Nxmkw-Q-nZv92wBgsA6Fsn4MQIF3sQhyPrPjm-inAAOA31F0hxkuDkZ7KiVCQAqrXzw.webp" alt="오코노미야키" class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="text-lg font-bold mb-2">🥞 오코노미야키</h4>
+                    <p class="text-sm text-gray-600 mb-2">보테쥬 (시부야), 키지 (오사카 본점)</p>
+                    <a href="https://www.google.com/maps/search/Botejyu+Shibuya+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>지도
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://rimage.savorjapan.com/svj/image/discover_oishii_japan/2170/article_312225_w640z.jpg" alt="덴푸라" class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="text-lg font-bold mb-2">🍤 덴푸라</h4>
+                    <p class="text-sm text-gray-600 mb-2">에도마에 전통 튀김 전문점들</p>
+                    <a href="https://www.google.com/maps/search/Tempura+Restaurant+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>지도
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 food-card">
+                    <img src="https://umamibites.com/wp-content/uploads/2024/09/UB227_main01.jpg" alt="와규 스키야키" class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h4 class="text-lg font-bold mb-2">🥩 와규 & 스키야키</h4>
+                    <p class="text-sm text-gray-600 mb-2">A5 등급 최고급 와규 전문점</p>
+                    <a href="https://www.google.com/maps/search/Wagyu+Sukiyaki+Tokyo" target="_blank" class="google-maps-btn">
+                        <i class="fas fa-map-marker-alt"></i>지도
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 교통 정보 -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-train text-blue-500 mr-3"></i>교통 정보
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-blue-600">추천 교통패스</h3>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold">하코네 프리패스</h4>
+                            <p class="text-sm text-gray-600">2일권 - 하코네 전 구간 이용 가능</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold">도쿄 메트로 3일권</h4>
+                            <p class="text-sm text-gray-600">도쿄 시내 지하철 무제한</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold">JR 야마노테선</h4>
+                            <p class="text-sm text-gray-600">주요 관광지 연결 순환선</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-green-600">주요 이동 시간</h3>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold">하네다공항 ↔ 하코네</h4>
+                            <p class="text-sm text-gray-600">약 2시간 30분</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold">하코네 ↔ 신주쿠</h4>
+                            <p class="text-sm text-gray-600">약 2시간</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold">도쿄 ↔ 아시카가</h4>
+                            <p class="text-sm text-gray-600">약 1시간 30분 (당일치기 가능)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 여행 팁 -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-3"></i>여행 팁
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-red-600">영화 촬영지 방문 시</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-camera text-red-500 mt-1"></i>
+                                <span>평일 오전이 사진 촬영하기 좋음</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-clock text-red-500 mt-1"></i>
+                                <span>스가신사 계단은 오후 시간대 추천</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-mobile-alt text-red-500 mt-1"></i>
+                                <span>영화 장면과 비교할 수 있는 앱 활용</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-blue-600">가족 여행 주의사항</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-thermometer-half text-blue-500 mt-1"></i>
+                                <span>10월 초 도쿄 날씨: 선선함 (얇은 외투 필요)</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-yen-sign text-blue-500 mt-1"></i>
+                                <span>현금 사용 빈도 높음 (충분한 엔화 환전)</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-subway text-blue-500 mt-1"></i>
+                                <span>지하철 노선도 미리 숙지</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 발레 체험 정보 -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-female text-pink-500 mr-3"></i>발레 체험 상세 정보
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-pink-500 pl-6">
+                        <h3 class="text-xl font-semibold text-pink-600 mb-4">차코트 다이칸야마 본점</h3>
+                        <img src="https://japanshopping.org/files/shopping_article_thumb/20220502104702.jpg" alt="차코트 다이칸야마" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>주소:</strong> 14-18 Daikanyamacho, Shibuya City, Tokyo 150-0034</p>
+                            <p><strong>체험 레슨:</strong> 2,200엔 (1회)</p>
+                            <p><strong>특징:</strong> 일본 최고 발레 브랜드 플래그십, 발레 쇼핑 + 스튜디오</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/Chacott+Daikanyama+Tokyo" target="_blank" class="google-maps-btn mt-3">
+                            <i class="fas fa-map-marker-alt"></i>구글 지도
                         </a>
                     </div>
-                    <div class="spot-item p-4 rounded">
-                        <h4 class="font-bold text-lg mb-2">✈️ 하네다공항 출발</h4>
-                        <p class="text-gray-700 mb-2">12:05 출발 | 김포공항 도착</p>
-                        <a href="https://maps.google.com/maps?q=Haneda+Airport+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm inline-block">
-                            <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
+                    <div class="border-l-4 border-pink-500 pl-6">
+                        <h3 class="text-xl font-semibold text-pink-600 mb-4">Angel R 오모테산도</h3>
+                        <img src="https://i.ytimg.com/vi/lMFl8jUasao/maxresdefault.jpg" alt="Angel R 오모테산도" class="w-full h-32 object-cover rounded-lg mb-3">
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>주소:</strong> 5-4-40 Minamiaoyama, Minato City, Tokyo 107-0062</p>
+                            <p><strong>체험 레슨:</strong> 3,740엔 (비지터 요금)</p>
+                            <p><strong>특징:</strong> 오모테산도역 6분, 현장 결제 가능</p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/Angel+R+Omotesando+Tokyo" target="_blank" class="google-maps-btn mt-3">
+                            <i class="fas fa-map-marker-alt"></i>구글 지도
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Restaurant Guide -->
-    <section class="py-8 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">🍜 맛집 가이드</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 라멘 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://article-image.travel.navitime.jp/img/NTJnews0045-ko/0.jpeg" alt="로쿠린샤 라멘" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🍜 로쿠린샤</h3>
-                        <p class="text-gray-600">도쿄역 라멘 스트리트</p>
+        <!-- 연락처 및 응급 정보 -->
+        <section class="mb-12">
+            <div class="bg-red-50 rounded-lg p-8">
+                <h2 class="text-2xl font-bold text-red-600 mb-6 flex items-center">
+                    <i class="fas fa-phone text-red-500 mr-3"></i>응급 연락처
+                </h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg p-4">
+                        <h3 class="font-semibold text-red-600 mb-2">🚨 응급상황</h3>
+                        <p class="text-gray-700">경찰: 110<br>소방서/구급차: 119</p>
                     </div>
-                    <p class="text-sm text-gray-700 mb-3">도쿄 최고 츠케멘 맛집 | 진한 국물과 쫄깃한 면발</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 1-9-1 Marunouchi, Chiyoda City, Tokyo</div>
-                    <a href="https://maps.google.com/maps?q=1-9-1+Marunouchi,+Chiyoda+City,+Tokyo+Rokurinsha" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
-                </div>
-
-                <!-- 야키토리 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://japankuru.com/gld-kanri/data/uploads/2024/08/image-56-800x561.png" alt="토리키조쿠" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🍗 토리키조쿠</h3>
-                        <p class="text-gray-600">시부야 가성비 이자카야</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <h3 class="font-semibold text-blue-600 mb-2">🏥 의료진료</h3>
+                        <p class="text-gray-700">도쿄 메디컬 센터<br>03-3815-5151</p>
                     </div>
-                    <p class="text-sm text-gray-700 mb-3">모든 메뉴 370엔 균일가 | 야키토리 전문점</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 Shibuya, Tokyo (여러 지점)</div>
-                    <a href="https://maps.google.com/maps?q=Torikizoku+Shibuya+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
-                </div>
-
-                <!-- 스시 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://rimage.savorjapan.com/svj/image/discover_oishii_japan/2170/article_312230_w640z.jpg" alt="츠키지 스시" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🍣 츠키지 스시</h3>
-                        <p class="text-gray-600">신선한 해산물</p>
+                    <div class="bg-white rounded-lg p-4">
+                        <h3 class="font-semibold text-green-600 mb-2">🗣️ 관광 안내</h3>
+                        <p class="text-gray-700">일본정부관광국<br>050-3816-2787</p>
                     </div>
-                    <p class="text-sm text-gray-700 mb-3">세계 최대 수산시장 | 최고급 신선도</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 Tsukiji, Tokyo</div>
-                    <a href="https://maps.google.com/maps?q=Tsukiji+Fish+Market+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
-                </div>
-
-                <!-- 후운지 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://img.japankuru.com/prg_img/img/img2020030917271109668200.png" alt="후운지 라멘" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🍜 후운지</h3>
-                        <p class="text-gray-600">타베로그 1위 츠케멘</p>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">도쿄 최고 츠케멘 | 진한 돈코츠 스프</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 2-14-3 Yoyogi, Shibuya, Tokyo</div>
-                    <a href="https://maps.google.com/maps?q=2-14-3+Yoyogi,+Shibuya,+Tokyo+Fuunji" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
-                </div>
-
-                <!-- 오코노미야키 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://i.namu.wiki/i/y8_vdPPxKXolmei_sm_Nxmkw-Q-nZv92wBgsA6Fsn4MQIF3sQhyPrPjm-inAAOA31F0hxkuDkZ7KiVCQAqrXzw.webp" alt="오코노미야키" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🥞 보테쥬</h3>
-                        <p class="text-gray-600">시부야 오코노미야키 원조</p>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">오사카 스타일 철판요리 | 현지 인기 맛집</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 Shibuya, Tokyo</div>
-                    <a href="https://maps.google.com/maps?q=Botejyu+Shibuya+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
-                </div>
-
-                <!-- 우동 -->
-                <div class="restaurant-card p-6 rounded-lg">
-                    <div class="text-center mb-4">
-                        <img src="https://i.namu.wiki/i/VVAUqCv-GYvNIn0MyCIAzMZ7LcZJH_ri8M7bQafCYLcU_wnD8Mfix8oHeBsBqKhUnDga_no8PcISBBPO10Rkgw.webp" alt="야키소바" class="w-full h-40 object-cover rounded-lg mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">🍜 우동신</h3>
-                        <p class="text-gray-600">신주쿠 우동 맛집</p>
-                    </div>
-                    <p class="text-sm text-gray-700 mb-3">탄력 있는 면발 | 진한 다시 국물</p>
-                    <div class="text-xs text-gray-500 mb-3">📍 Shinjuku, Tokyo</div>
-                    <a href="https://maps.google.com/maps?q=Udonshin+Shinjuku+Tokyo" target="_blank" class="map-link text-white px-4 py-2 rounded-full text-sm w-full block text-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>구글지도로 보기
-                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Travel Tips -->
-    <section class="py-8 bg-gray-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">💡 여행 꿀팁</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <i class="fas fa-subway text-3xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">교통 정보</h3>
-                    <ul class="text-sm text-gray-700 space-y-1">
-                        <li>• 도쿄 메트로 3일권 추천</li>
-                        <li>• Suica/Pasmo 카드 필수</li>
-                        <li>• JR 야마노테선 주요 연결</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <i class="fas fa-yen-sign text-3xl text-green-600 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">예산 가이드</h3>
-                    <ul class="text-sm text-gray-700 space-y-1">
-                        <li>• 발레 체험: 2,200엔~</li>
-                        <li>• 라멘: 800-1,500엔</li>
-                        <li>• 고급 스시: 3,000-15,000엔</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <i class="fas fa-camera text-3xl text-purple-600 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">포토 스팟</h3>
-                    <ul class="text-sm text-gray-700 space-y-1">
-                        <li>• 스가신사: 오후 2-4시 최적</li>
-                        <li>• 도쿄타워: 일몰 1시간 전</li>
-                        <li>• 시부야: 평일 오전 추천</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <i class="fas fa-language text-3xl text-red-600 mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">유용한 일본어</h3>
-                    <ul class="text-sm text-gray-700 space-y-1">
-                        <li>• 스미마센 (실례합니다)</li>
-                        <li>• 아리가토 (감사합니다)</li>
-                        <li>• 이쿠라데스카 (얼마입니까)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emergency Info -->
-    <section class="py-8 bg-red-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-center mb-6 text-red-800">🚨 비상 연락처</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div class="bg-white p-4 rounded-lg">
-                    <i class="fas fa-phone text-2xl text-red-600 mb-2"></i>
-                    <h3 class="font-bold">긴급상황</h3>
-                    <p class="text-lg font-mono">110 (경찰)</p>
-                    <p class="text-lg font-mono">119 (소방서)</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg">
-                    <i class="fas fa-hospital text-2xl text-blue-600 mb-2"></i>
-                    <h3 class="font-bold">관광 핫라인</h3>
-                    <p class="text-lg font-mono">050-3816-2787</p>
-                    <p class="text-sm text-gray-600">24시간 다국어 지원</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg">
-                    <i class="fas fa-building text-2xl text-green-600 mb-2"></i>
-                    <h3 class="font-bold">한국 영사관</h3>
-                    <p class="text-lg font-mono">03-3452-7611</p>
-                    <p class="text-sm text-gray-600">여권 분실 시</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="gradient-bg text-white py-8 text-center">
-        <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold mb-4">🌸 즐거운 도쿄 여행 되세요!</h3>
-            <p class="opacity-90 mb-4">지훈이네 가족 모두가 특별한 추억을 만들기를 바랍니다</p>
-            <div class="text-sm opacity-75">
-                <p>📍 모든 장소에 구글지도 링크가 포함되어 있습니다</p>
-                <p>🔄 실시간 교통정보와 영업시간을 확인해주세요</p>
-            </div>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-semibold mb-2">🎬 지훈이네 가족 완벽 도쿄 여행 가이드</p>
+            <p class="text-gray-400">영화 성지순례 + 발레 체험 + 미식 투어를 모두 담은 맞춤형 가족 여행</p>
+            <p class="text-gray-500 mt-4">모든 구글 지도 링크를 클릭하면 바로 길찾기가 가능합니다!</p>
         </div>
     </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"95e8bcb109bbf5c0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDqpVmbc33LFKzzvtEouEjZRvxVg974P1pkm7YBWHGDFX9GNFYnGtUREYRonJYG70VQNkFPSze9zOCSJd92KrYEkxE365yegNK7DtcShvr5J4M%2BD7aLcWyNbMHj6HOKY08AZ1G%2Fp8JJJWO%2FV7c7fBC7UBn5m5FTxnIH0Fn%2Fy%2BJcs3ZW20EFhmX3wnhxtfP4NddblMU5S9qdVGH9PdT%2BVRu%2FmpFG5kQjQ0l3kNMpOHzwlKyDWLCNDFVykkkTK01Nllp3yrs6%2Fprb36KximJ7ZZyuiSVLiD68YnSBYP0Um8alYIjry8w26kTNOWoB5hkenYWd%2B8hDKUi2b5eN60%2FTu76m%2F44Bof1M8lcrMLKnM5kGPeI4C7WQgCJEZ2L3jquU2gWqGx8hTC4p4hlePPy9bK03Az3r%2FXgxSNX6aNS39XkrKnasFbf81cfGlkRBPmgKIuF6kc%2BbiPZ6ScUe%2BWyOQ4dZl1u8YOplljLVDNzi1RYK9bZzyDKug%2FaRdDKcFmlPnMU9g9klYDbxLdB5ESF4fzYJAucGrQH%2B8GyUPch4SFDxbT";
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDhxEeo0nau%2FwFj1wnOkcKpXuYU9DsDtcwJx60OA%2FrcXSuC7Ylqu0P5gusbf5i8%2B9hfZhGoLLO1cuwMJKov6vGOaK0ivHsUXPHMW7KCRA75aidShXzDUH2uGqZn%2FMB17EQNKdARjAzebLeKi2%2FQ0RbjqM1rl76uw6dgmbv8hu7FdG%2BvbSpjBS%2BzThD6qsdeXSbB9zeTizefWIXP%2FkO6aS2wHTYgsORSRwfFZIdALkGJhIH6DI7twk%2FIehH7QspQdZh9yV3muQwetuPjzKO82HfnEfRXYdGBO5MzzX3p9hqOZk15GMzUSJSMPyLTFUfOMn6zg9V%2BidpD1U3NBd5CGw2juRf3dqMnlFj31Ar0PM1MSxWVQSQ00C%2B%2B%2B2V9SiZ55E%2BJRdVXNMYix5wdq5E9qzHkUry3HQ78NKppQ4l3y5mX%2BpZ7OqStoyJEFF2xE68ONLf9nhzwgL9262ADpYFsfHtiuE6i2ALJUov1AAdrkBTwgx6dOEOa0lSOZXjD3cLUZJlBnOzp%2FDzQqjIl%2ByPL0kt4ppiJVq7aFGJEIpeY8TMS%2B2";
         window.__genspark_locale = "ko-KR";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDqpVmbc33LFKzzvtEouEjZRvxVg974P1pkm7YBWHGDFX9GNFYnGtUREYRonJYG70VQNkFPSze9zOCSJd92KrYEkxE365yegNK7DtcShvr5J4M+D7aLcWyNbMHj6HOKY08AZ1G/p8JJJWO/V7c7fBC7UBn5m5FTxnIH0Fn/y+Jcs3ZW20EFhmX3wnhxtfP4NddblMU5S9qdVGH9PdT+VRu/mpFG5kQjQ0l3kNMpOHzwlKyDWLCNDFVykkkTK01Nllp3yrs6/prb36KximJ7ZZyuiSVLiD68YnSBYP0Um8alYIjry8w26kTNOWoB5hkenYWd+8hDKUi2b5eN60/Tu76m/44Bof1M8lcrMLKnM5kGPeI4C7WQgCJEZ2L3jquU2gWqGx8hTC4p4hlePPy9bK03Az3r/XgxSNX6aNS39XkrKnasFbf81cfGlkRBPmgKIuF6kc+biPZ6ScUe+WyOQ4dZl1u8YOplljLVDNzi1RYK9bZzyDKug/aRdDKcFmlPnMU9g9klYDbxLdB5ESF4fzYJAucGrQH+8GyUPch4SFDxbT";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDhxEeo0nau/wFj1wnOkcKpXuYU9DsDtcwJx60OA/rcXSuC7Ylqu0P5gusbf5i8+9hfZhGoLLO1cuwMJKov6vGOaK0ivHsUXPHMW7KCRA75aidShXzDUH2uGqZn/MB17EQNKdARjAzebLeKi2/Q0RbjqM1rl76uw6dgmbv8hu7FdG+vbSpjBS+zThD6qsdeXSbB9zeTizefWIXP/kO6aS2wHTYgsORSRwfFZIdALkGJhIH6DI7twk/IehH7QspQdZh9yV3muQwetuPjzKO82HfnEfRXYdGBO5MzzX3p9hqOZk15GMzUSJSMPyLTFUfOMn6zg9V+idpD1U3NBd5CGw2juRf3dqMnlFj31Ar0PM1MSxWVQSQ00C+++2V9SiZ55E+JRdVXNMYix5wdq5E9qzHkUry3HQ78NKppQ4l3y5mX+pZ7OqStoyJEFF2xE68ONLf9nhzwgL9262ADpYFsfHtiuE6i2ALJUov1AAdrkBTwgx6dOEOa0lSOZXjD3cLUZJlBnOzp/DzQqjIl+yPL0kt4ppiJVq7aFGJEIpeY8TMS+2";
     </script>
     
     <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
